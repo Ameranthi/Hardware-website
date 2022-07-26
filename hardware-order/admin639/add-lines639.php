@@ -125,13 +125,13 @@ $price639 = $price;
 $priceOnPurchase639 = $price;
 $LineNO639 + 1;
 
-Echo "$price639" .'/n';
-Echo"$LineNO639".'/n' ;
-Echo  "$Qty639" .'/n';
-Echo "$Part639_PartNO639".'/n';
+// Echo "$price639" .'/n';
+// Echo"$LineNO639".'/n' ;
+// Echo  "$Qty639" .'/n';
+// Echo "$Part639_PartNO639".'/n';
 
 
-$sql = "INSERT INTO Lines0639 SET 
+$sql6 = "INSERT INTO Lines0639 SET 
             Qty639 = '$Qty639',
             LineNO639 = $LineNO639,
             priceOnPurchase639 = '$priceOnPurchase639',
@@ -141,11 +141,12 @@ $sql = "INSERT INTO Lines0639 SET
             clientID639 = $clientID639
             
     ";
+    echo "$sql6";
     //Execute the Query
-    $res = mysqli_query($conn, $sql);
+    $res6 = mysqli_query($conn, $sql6);
 
     //Check if data inserted or not
-    if($res == true)
+    if($res6 == true)
     {
         //Data inserted Successfullly into DB
         $_SESSION['add'] = "<div class='success'> PO Added Successfully.</div>";
